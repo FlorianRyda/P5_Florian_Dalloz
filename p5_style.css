@@ -1,6 +1,29 @@
+*{
+  margin : 0px;
+  padding : 0px;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
 
 header {
 	display: inline-block;
+}
+
+body {
+  background-image: linear-gradient(120deg, #8B0000, #191970);
+}
+
+#film-menus{
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+
+h3{
+  text-align: center;
 }
 
 
@@ -8,18 +31,19 @@ header > ul.main-menu {
 	color: orange;
 	text-align: center;
 	padding-left: 40px;
-	display: inline-block;
+	/* display: inline-block; */
 
 }
 
 header > ul.main-menu > li {
 	display: inline-block;
-    padding: 20px 20px;
+  padding: 20px 20px;
 
 }
 
+
 h2 {
-	color:  blueviolet;
+	color:  white;
 }
 
 ul.nav {
@@ -32,7 +56,7 @@ ul.nav > li {
   padding: 10px 20px;
 }
 ul.nav > li:hover {
-  background-color: #2779BF;
+  background-color : black;
 }
 ul.nav > li > a {
   color: white;
