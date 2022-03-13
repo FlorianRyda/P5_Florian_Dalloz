@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>www.JustStreamIt.com</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='p5_style.css'>
+
+</head>
+
+<body>
+
+	<header>
+		<h1>JustStreamIt</h1>
+		<nav>
+			<h2>Welcome</h2>
+			<h2>Categories</h2>
+		</nav>
+
+
+	</header>
+
+
+	<button id="myBtn">Voir Plus</button>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div id="film-info"></div>
+		</div>
+
+	</div>
+
+	<div id="film-menus">
+		<div id="best-movie">
+			<h3>Film à l'affiche</h3>
+			<div id="menu_list">
+				<ul id="best-movie-info">
+				</ul>
+			</div>
+		</div>
+
+
+
+		<div id="menu_best">
+			<h3>Films les mieux Notés</h3>
+			<div id="menu_list">
+				<button id="previous_best" class="prevBtn"><span>&#x1F830</span></button>
+				<ul id="best_movies">
+				</ul>
+				<button id="next_best" class="nextBtn"><span>&#x1F82E</span></button>
+			</div>
+		</div>
+
+		<div id="menu_comedies">
+			<h3>Comédies</h3>
+			<div id="menu_list">
+				<button id="previous_comedies" class="prevBtn"><span>&#x1F830</span></button>
+				<ul id="comedies">
+				</ul>
+				<button id="next_comedies" class="nextBtn"><span>&#x1F82E</span></button>
+			</div>
+		</div>
+
+		<div id="menu_horrors">
+			<h3>Horreur</h3>
+			<div id="menu_list">
+				<button id="previous_horror" class="prevBtn"><span>&#x1F830</span></button>
+				<ul id="horrors">
+				</ul>
+				<button id="next_horror" class="nextBtn"><span>&#x1F82E</span></button>
+			</div>
+		</div>
+
+		<div id="menu_romances">
+			<h3>Romance</h3>
+			<div id="menu_list">
+				<button id="previous_romances" class="prevBtn"><span>&#x1F830</span></button>
+				<ul id="romances">
+				</ul>
+				<button id="next_romance" class="nextBtn"><span>&#x1F82E</span></button>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="app"></div>
+	<script src='app.js'></script>
+</body>
+
+</html>
