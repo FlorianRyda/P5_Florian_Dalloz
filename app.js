@@ -42,29 +42,27 @@ function load_films(page, category, ul_id) {
 
 
 function load_best_film(page, ul_id) {
-    fetch('http://127.0.0.1:8000/api/v1/titles/?page=' + page + '&page_size=4&sort_by=-imdb_score&genre=')
+    fetch('http://127.0.0.1:8000/api/v1/titles/?page=' + page + '&page_size=1&sort_by=-imdb_score&genre=')
         .then(response => response.json())
         .then(data => {
             const ul = document.getElementById(ul_id);
-            ul.innerHTML = '';
-            // let liste_modale = document.createElement('li');
-            // let image_modale = document.createElement("img");
-            // image_modale.src = data.results[0].image_url;
-            // liste_modale.appendChild(image_modale);
-
-
-            let liste_modale = document.createElement('li');
-            let image_modale = document.createElement("img");
-            image_modale.src = data.results[0].image_url;
-            liste_modale.appendChild(image_modale);
-            ul.onclick = (event) => {
-                modal.style.display = "block";
-                fetch('http://127.0.0.1:8000/api/v1/titles/' + film.id)
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log(data)
-                        document.getElementById("film-info").innerHTML = `
+            fetch('http://127.0.0.1:8000/api/v1/titles/' + data.results[0].id)
+                .then(response => response.json())
+                .then(data => {
+                    ul.innerHTML = `
+                        <div>
+                        <h1> Title : ${data.title}</h1>
+                        <button id="myBtn">Voir Plus</button>
+                        <p> Description : ${data.description}</p>
+                        </div>
                         <p><img src="${data.image_url}"></p>
+                        
+                        `
+                    const button = document.getElementById("myBtn")
+                    button.onclick = (event) => {
+                        modal.style.display = "block";
+                        document.getElementById("film-info").innerHTML = `
+                        <div>
                         <h1> Title : ${data.title}</h1>
                         <p>Genre : ${data.genres}</p>
                         Synopsis : ${data.year}</p>
@@ -75,17 +73,23 @@ function load_best_film(page, ul_id) {
                         <p> Duration : ${data.countries}</p>
                         <p> Box Office : ${data.worldwide_gross_income}</p>
                         <p> Description : ${data.description}</p>
+                        </div>
+                        <p><img src="${data.image_url}"></p>
                         `
-                    })
-            }
-
-            ul.appendChild(liste_modale)
-
+                    }
+                })
 
         })
 }
 
-load_best_film(1, "best-movie")
+
+
+
+
+
+
+
+load_best_film(1, "best-movie-info")
 load_films(1, "", "best_movies")
 load_films(1, "comedy", "comedies")
 load_films(1, "horror", "horrors")
@@ -93,11 +97,9 @@ load_films(1, "romance", "romances")
 
 
 // Modal
-var btn = document.getElementById("myBtn");
+// var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
-btn.onclick = function () {
-    modal.style.display = "block";
-}
+
 span.onclick = function () {
     modal.style.display = "none";
 }
