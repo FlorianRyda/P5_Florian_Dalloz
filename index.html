@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
 	<meta charset="utf-8">
@@ -16,8 +16,8 @@
 	<header>
 		<h1>JustStreamIt</h1>
 		<nav>
-			<h2>Welcome</h2>
-			<h2>Categories</h2>
+			<h2>Menu Principal</h2>
+			<h2>Catégories</h2>
 		</nav>
 
 
@@ -25,63 +25,63 @@
 
 
 
-	<div id="myModal" class="modal">
-		<div class="modal-content">
+	<div id="my_modal" class="modal">
+		<div class="modal_content">
 			<span class="close">&times;</span>
-			<div id="film-info"></div>
+			<div id="film_info"></div>
 		</div>
-
 	</div>
-	<h3>Film à l'affiche</h3>
-	<div id="best-movie">
-		<ul id="best-movie-info">
+
+	<h3>Film à l'Affiche</h3>
+
+	<article id="best_movie">
+		<ul id="best_movie_info">
 		</ul>
+	</article>
 
-	</div>
+	<article id="film_menus">
 
-	<div id="film-menus">
-
-		<div id="menu_best">
-			<h3>Films les mieux Notés</h3>
-			<div id="menu_list">
-				<button id="previous_best" class="prevBtn"><span>&#x1F830</span></button>
+		<section id="menu_best">
+			<h3>Films les Mieux Notés</h3>
+			<div class="menu_list">
+				<button id="previous_best" class="previous_button"><span>&#x1F830;</span></button>
 				<ul id="best_movies">
 				</ul>
-				<button id="next_best" class="nextBtn"><span>&#x1F82E</span></button>
+				<button id="next_best" class="next_button"><span>&#x1F82E;</span></button>
 			</div>
-		</div>
+		</section>
 
-		<div id="menu_comedies">
+		<section id="menu_comedies">
 			<h3>Comédies</h3>
-			<div id="menu_list">
-				<button id="previous_comedies" class="prevBtn"><span>&#x1F830</span></button>
+			<div class="menu_list">
+				<button id="previous_comedies" class="previous_button"><span>&#x1F830;</span></button>
 				<ul id="comedies">
 				</ul>
-				<button id="next_comedies" class="nextBtn"><span>&#x1F82E</span></button>
+				<button id="next_comedies" class="next_button"><span>&#x1F82E;</span></button>
 			</div>
-		</div>
+		</section>
 
-		<div id="menu_horrors">
-			<h3>Horreur</h3>
-			<div id="menu_list">
-				<button id="previous_horror" class="prevBtn"><span>&#x1F830</span></button>
+		<section id="menu_horrors">
+			<h3>Films d'Horreur</h3>
+			<div class="menu_list">
+				<button id="previous_horror" class="previous_button"><span>&#x1F830;</span></button>
 				<ul id="horrors">
 				</ul>
-				<button id="next_horror" class="nextBtn"><span>&#x1F82E</span></button>
+				<button id="next_horror" class="next_button"><span>&#x1F82E;</span></button>
 			</div>
-		</div>
+		</section>
 
-		<div id="menu_romances">
-			<h3>Romance</h3>
-			<div id="menu_list">
-				<button id="previous_romances" class="prevBtn"><span>&#x1F830</span></button>
+		<section id="menu_romances">
+			<h3>Romances</h3>
+			<div class="menu_list">
+				<button id="previous_romances" class="previous_button"><span>&#x1F830;</span></button>
 				<ul id="romances">
 				</ul>
-				<button id="next_romance" class="nextBtn"><span>&#x1F82E</span></button>
+				<button id="next_romance" class="next_button"><span>&#x1F82E;</span></button>
 			</div>
-		</div>
+		</section>
 
-	</div>
+	</article>
 
 	<div id="app"></div>
 	<script src='app.js'></script>

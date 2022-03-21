@@ -6,7 +6,7 @@
 
 
 body {
-  background-image: rgb(0, 0, 0);
+  background-color: #000000;
 }
 
 header {
@@ -24,8 +24,8 @@ header nav {
   display: flex;
   position: relative;
   flex-direction: row;
-  padding-top:10px;
-  padding-left: 200px;
+  padding-top: 10px;
+  padding-left: 30%;
   text-align: center;
   
 }
@@ -40,28 +40,26 @@ header nav h2:hover{
   transition: 00.5s;
 }
 
-#best-movie{
+#best_movie{
   display: flex;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 25%;
+  margin-right: 25%;
   border: solid rgb(78, 78, 78);
-  padding-right: 15%;
   background: rgb(32, 32, 32);
   border-radius: 8px;
 
 }
 
-#best-movie ul {
-  align-content: center;
-  
-
-}
-
-#best-movie button{
+#best_movie button{
   text-align: center;
+  border: solid 4px #f5f2f2;
 }
 
-h2 {
+#best_movie img{
+  border: solid 3px #f5f2f2;
+}
+
+h2, p, h1, button{
 	color:  beige;
 }
 
@@ -80,18 +78,18 @@ ul{
   padding: 0.5rem;
 }
 
-#film-menus ul li {
+#film_menus ul li {
   cursor: pointer;
   border: solid #f5f2f2;
   margin: 0.2rem
 }
 
-#menu_list button{
+.menu_list button{
   height: 275px;
   width: 40px;
 }
 
-#myBtn{
+#modal_button{
   margin: 5%;
   border-radius: 8px;
   background-color: #e0657a;
@@ -101,13 +99,13 @@ ul{
   cursor: pointer
 }
 
-#myBtn:hover{
+#modal_button:hover{
   background-color: #6d313b;
   transition: 0.4s;
 }
 
 /* Next and Previous button styling */
-.nextBtn, .prevBtn{
+.next_button, .previous_button{
   display: inline-block;
   border-radius: 4px;
   background-color: #e0657a;
@@ -122,7 +120,7 @@ ul{
   margin: 1px;
 }
 
-.nextBtn span, .prevBtn span{
+.next_button span, .previous_button span{
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -131,17 +129,23 @@ ul{
   
 }
 
-.nextBtn:hover, .prevBtn:hover{
+.next_button:hover, .previous_button:hover{
   background-color: #6d313b;
 
 }
 
-#menu_list {
+.menu_list {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content:center;
 }
+
+#film_menus{
+  padding-bottom: 50px;
+}
+
+/* Modal styling  */
 
 .close:hover,
 .close:focus {
@@ -159,12 +163,11 @@ ul{
   width: 100%; 
   height: 100%; 
   overflow: auto; 
-  background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4); 
 }
 
 
-.modal-content {
+.modal_content {
   background-color: #000000;
   margin: 15% auto;
   padding: 20px;
@@ -187,6 +190,3 @@ ul{
   cursor: pointer;
 }
 
-#film-menus{
-  padding-bottom: 50px;
-}

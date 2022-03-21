@@ -1,4 +1,4 @@
-var modal = document.getElementById("myModal");
+var modal = document.getElementById("my_modal");
 
 function load_films(page, category, ul_id) {
     fetch('http://127.0.0.1:8000/api/v1/titles/?page=' + page + '&page_size=4&sort_by=-imdb_score&genre=' + category)
@@ -18,16 +18,16 @@ function load_films(page, category, ul_id) {
                         .then(response => response.json())
                         .then(data => {
                             console.log(data)
-                            document.getElementById("film-info").innerHTML = `
+                            document.getElementById("film_info").innerHTML = `
                             <p><img src="${data.image_url}"></p>
-                            <h1> Title : ${data.title}</h1>
+                            <h2> Titre : ${data.title}</h2>
                             <p>Genre : ${data.genres}</p>
-                            Synopsis : ${data.year}</p>
-                            Rated : ${data.rated}</p>
-                            Imdb Score : ${data.imdb_score}</p>
-                            <p> Director : ${data.directors}</p>
-                            <p> Actors : ${data.actors}</p>
-                            <p> Duration : ${data.countries}</p>
+                            <p>Synopsis : ${data.year}</p>
+                            <p> Noté : ${data.rated}</p>
+                            <p> Score Imdb : ${data.imdb_score}</p>
+                            <p> Directeur : ${data.directors}</p>
+                            <p> Acteurs : ${data.actors}</p>
+                            <p> Durée : ${data.countries}</p>
                             <p> Box Office : ${data.worldwide_gross_income}</p>
                             <p> Description : ${data.description}</p>
                             `
@@ -51,30 +51,30 @@ function load_best_film(page, ul_id) {
                 .then(data => {
                     ul.innerHTML = `
                         <div>
-                        <h1> Title : ${data.title}</h1>
-                        <button id="myBtn">Voir Plus</button>
+                        <h2> Titre : ${data.title}</h2>
+                        <button id="modal_button">Voir Plus</button>
                         <p> Description : ${data.description}</p>
                         </div>
                         <p><img src="${data.image_url}"></p>
                         
                         `
-                    const button = document.getElementById("myBtn")
+                    const button = document.getElementById("modal_button")
                     button.onclick = (event) => {
                         modal.style.display = "block";
-                        document.getElementById("film-info").innerHTML = `
+                        document.getElementById("film_info").innerHTML = `
                         <div>
-                        <h1> Title : ${data.title}</h1>
-                        <p>Genre : ${data.genres}</p>
-                        Synopsis : ${data.year}</p>
-                        Rated : ${data.rated}</p>
-                        Imdb Score : ${data.imdb_score}</p>
-                        <p> Director : ${data.directors}</p>
-                        <p> Actors : ${data.actors}</p>
-                        <p> Duration : ${data.countries}</p>
+                        <p><img src="${data.image_url}"></p>
+                        <h2> Titre : ${data.title}</h2>
+                        <p> Genre : ${data.genres}</p>
+                        <p> Synopsis : ${data.year}</p>
+                        <p> Noté : ${data.rated}</p>
+                        <p> Imdb Score : ${data.imdb_score}</p>
+                        <p> Directeur : ${data.directors}</p>
+                        <p> Acteurs : ${data.actors}</p>
+                        <p> Durée : ${data.countries}</p>
                         <p> Box Office : ${data.worldwide_gross_income}</p>
                         <p> Description : ${data.description}</p>
                         </div>
-                        <p><img src="${data.image_url}"></p>
                         `
                     }
                 })
@@ -85,11 +85,7 @@ function load_best_film(page, ul_id) {
 
 
 
-
-
-
-
-load_best_film(1, "best-movie-info")
+load_best_film(1, "best_movie_info")
 load_films(1, "", "best_movies")
 load_films(1, "comedy", "comedies")
 load_films(1, "horror", "horrors")
@@ -97,7 +93,6 @@ load_films(1, "romance", "romances")
 
 
 // Modal
-// var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function () {
