@@ -13,4 +13,17 @@ Copier le lien vers le dépôt GitHub du projet : https://github.com/FlorianRyda
 Le programme devrait à présent être cloné dans le dossier cible que vous avez créé. Cette étape n’aura pas besoin d’être répétée tant que le dépôt cloné ne sera pas modifié ou supprimé de votre machine.
 
 
+Etape 2 - Activer l'environnement virtuel & Lancer le serveur de l'API
 
+Commencez par vous rendre dans le document de l'API
+Créez et/ou activer un environnement virtuel
+installez les modules avec le fichier requirements.txt
+
+Lancez le serveur de l'API avec la commande
+<python manage.py runserver>
+
+Un message devrait apparaitre dans le terminal pour confirmer que le serveur fonctionne.
+
+Etape 3
+
+Ouvrez le fichier HTML, tout simplement !
